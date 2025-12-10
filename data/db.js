@@ -8,8 +8,7 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-    // if error is true discard it
-    if (err) throw err;
+    if (err) return res.status(500).json({ error: true, message: "couldn't connect!" })
     console.log("connected!");
 
 })

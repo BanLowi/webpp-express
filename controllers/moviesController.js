@@ -10,4 +10,4 @@ function index(req, res) {
     })
 }
 
-module.exports = index;
+module.exports = { index };
