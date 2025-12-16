@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000;
 const cors = require("cors");
 const moviesRouter = require("./routers/movies");
+const reviewsRouter = require("./routers/reviews");
 
 app.use(express.static("public"));
 
@@ -17,3 +18,12 @@ app.listen(PORT, () => {
 });
 
 app.use("/movies", moviesRouter);
+
+app.use("/reviews", reviewsRouter);
+
+app.get('/about', (req, res) => {
+    res.json({
+        title: "About",
+        content: "Pagina About"
+    });
+});

@@ -28,7 +28,7 @@ function show(req, res) {
             return res.status(404).json({ error: true, message: "Movies not Found" })
 
         }
-        res.json(result);
+        res.json(result[0]);
     });
 }
 

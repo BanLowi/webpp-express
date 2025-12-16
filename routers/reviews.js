@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const moviesController = require("../controllers/moviesController");
+const reviewsController = require("../controllers/reviewsController");
 
 /* Index */
-router.get("/", moviesController.index);
+router.get("/", reviewsController.index);
 
 /* Show */
-router.get("/:id", moviesController.show);
+router.get("/:id", reviewsController.show);
 
 /* Store */
 
